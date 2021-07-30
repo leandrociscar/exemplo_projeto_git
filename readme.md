@@ -6,6 +6,7 @@
 
  ## Facilitadores
 
+ * Leandro Ciscar - [Social](www.facebook.com/Leandrociscar)
  * Andre Sionek - [GitHub](www.google.com)
  * Rhuan Lima - [GitHub](www.pudim.com.br)
 
