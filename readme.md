@@ -10,7 +10,7 @@
  * Andre Sionek - [GitHub](www.google.com)
  * Rhuan Lima - [GitHub](www.pudim.com.br)
 
- ## Calendario:
+ ## Calendario mudou:
 
  - hoje é sexta feita
  - amanha é sabado
