@@ -1,0 +1,27 @@
+#para iniciar o docker
+#docker-compose up
+#sem o -d para pegar a chave de adm, ou posso acessar o docker conforme abaixo e buscar na pasta secrets
+#38ce3420433d4c8aaf550fe345769d41
+
+#para executar um docker via cmd
+#pegar o id via: docker ps
+#para executar comandos: docker exec -it ID bash -l
+
+#versao do yml
+version: "3"
+#define o servico
+services:
+    jenkins:
+        #pesquisa primeiro local, senao encontrar faz donwload no docker hub
+        image: pyjenkins
+        #defino o nome do container
+        container_name: "jenkins_ciscar"
+        #defino a porta
+        ports:
+            - "8000:8080"
+            #porta criptografia do jenkins
+            - "50000:50000"
+        #defino volumes para armazenar
+        volumes: 
+            - "./jenkins_home:/var/jenkins_home"
+            - "./cambio:/cambio"
