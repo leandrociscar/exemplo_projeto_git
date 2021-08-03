@@ -1,0 +1,17 @@
+#crio a imagem baseada no jenkins
+FROM jenkins/jenkins
+#defino  o user que vai executar os comandos
+USER root
+#comando RUN executa quando for criar a imagem
+#atualiza pacotes para a mais recente
+RUN apt-get update
+#instala o python+pip, o -y é para instalar sem perguntar
+RUN apt-get install -y python-pip
+#copio  o arquivo requirements e faco a instalacao dos pacotes
+COPY ./cambio/requirements.txt .
+RUN pip install -r requirements.txt
+
+#o comando CMD executa sempre que iniciar, já o RUN executa somente ao criar a imagem
+
+#para executar a imagem
+#docker build -t pyjenkins .
